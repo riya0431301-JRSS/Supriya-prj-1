@@ -1,28 +1,27 @@
-from student import Student
-from database import Database
+# Student Grade Calculator
 
-db = Database()
+print("Student Grade Calculator")
 
-def menu():
-    while True:
-        print("\n1. Add Student")
-        print("2. View Students")
-        print("3. Exit")
+# Input marks
+tamil = 80
+english = 75
+maths = 90
+science = 85
+social = 70
 
-        choice = input("Enter choice: ")
+# Calculate total and average
+total = tamil + english + maths + science + social
+average = total / 5
 
-        if choice == '1':
-            name = input("Enter name: ")
-            age = input("Enter age: ")
-            student = Student(name, age)
-            db.add_student(student)
+print("Total Marks:", total)
+print("Average:", average)
 
-        elif choice == '2':
-            students = db.get_students()
-            for s in students:
-                print(f"Name: {s.name}, Age: {s.age}")
-
-        elif choice == '3':
-            break
-
-menu()
+# Find grade
+if average >= 90:
+    print("Grade: A")
+elif average >= 75:
+    print("Grade: B")
+elif average >= 60:
+    print("Grade: C")
+else:
+    print("Grade: D")
