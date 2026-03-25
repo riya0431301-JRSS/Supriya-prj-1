@@ -24,4 +24,5 @@ elif average >= 75:
 elif average >= 60:
     print("Grade: C")
 else:
-    print("Grade: D")
+    print("Grade:D")
+ https://github.com/riya0431301-JRSS/Supriya-prj-1/blob/main/Test%20program
